@@ -1,1 +1,0 @@
-(()=>{"use strict";var e=document.querySelector("#button"),t=document.querySelector("#paragraph");let r=!1;e.addEventListener("click",(function(){r=!r,e.textContent=r?"Hide the paragraph":"Show the paragraph",t.style.display=r?"block":"none"}))})();

@@ -1,4 +1,6 @@
 import { myButton, myParagraph } from "./loader";
+import "../css/main.css";
+import "../css/button.css";
 
 let isShow = false;
 
@@ -10,4 +12,6 @@ function toggle() {
   // update button text
   myButton.textContent = isShow ? "Hide the paragraph" : "Show the paragraph";
   myParagraph.style.display = isShow ? "block" : "none";
+
+  console.log(__DEV__);
 }
