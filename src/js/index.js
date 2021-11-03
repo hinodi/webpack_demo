@@ -1,3 +1,5 @@
+import { myButton, myParagraph } from "./loader";
+
 let isShow = false;
 
 myButton.addEventListener("click", toggle);

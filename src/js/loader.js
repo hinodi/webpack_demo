@@ -1,2 +1,2 @@
-var myButton = document.querySelector("#button");
-var myParagraph = document.querySelector("#paragraph");
+export var myButton = document.querySelector("#button");
+export var myParagraph = document.querySelector("#paragraph");
