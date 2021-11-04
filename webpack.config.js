@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var WebpackObfuscator = require("webpack-obfuscator");
+var LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/index.js",
@@ -20,6 +21,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
+            plugins: ["lodash"],
             presets: [["@babel/preset-env", { targets: "defaults" }]],
           },
         },
@@ -33,5 +35,6 @@ module.exports = {
     new webpack.DefinePlugin({
       __DEV__: JSON.stringify(true),
     }),
+    new LodashModuleReplacementPlugin(),
   ],
 };

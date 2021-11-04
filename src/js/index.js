@@ -1,3 +1,5 @@
+import lodash from "lodash";
+import moment from "moment";
 import { myButton, myParagraph } from "./loader";
 import Counter from "./Counter";
 import "../css/main.css";
@@ -15,7 +17,6 @@ function toggle() {
   myButton.textContent = isShow ? "Hide the paragraph" : "Show the paragraph";
   myParagraph.style.display = isShow ? "block" : "none";
 
-  console.log(counter.increase());
-  const a = { b: { c: 100 } };
-  console.log(a?.b?.c);
+  console.log(lodash.upperCase("button pressed"));
+  console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
 }
