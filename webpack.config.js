@@ -2,6 +2,8 @@ var path = require("path");
 var webpack = require("webpack");
 var WebpackObfuscator = require("webpack-obfuscator");
 var LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
+var BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./src/js/index.js",
@@ -36,5 +38,6 @@ module.exports = {
       __DEV__: JSON.stringify(true),
     }),
     new LodashModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 };
